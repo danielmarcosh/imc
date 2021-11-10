@@ -4,18 +4,93 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
-    android:orientation="vertical">
-    <RelativeLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-        <TextView
-            android:id="@+id/text_view_id"
-            android:layout_height="wrap_content"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/caixa"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/cor_1"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <LinearLayout
             android:layout_width="wrap_content"
-            android:text="@string/hello" />
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="30dp"
+            android:background="@color/cardview_light_background"
+            android:orientation="horizontal">
 
-    </RelativeLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:text="@string/imc"
+                android:textSize="30sp" />
 
+            <EditText
+                android:id="@+id/peso"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:hint="@string/peso"
+                android:inputType="numberDecimal"
+                android:textSize="30sp" />
+
+            <EditText
+                android:id="@+id/altura"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:hint="@string/altura"
+                android:inputType="numberDecimal"
+                android:textSize="30sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/blocoResultado"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/cardview_light_background"
+            android:orientation="horizontal"
+            android:visibility="invisible">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:text="@string/resultado"
+                android:textSize="40sp" />
+
+            <TextView
+                android:id="@+id/resultado"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0.0"
+                android:textSize="40sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@color/cardview_light_background"
+            android:orientation="horizontal"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp">
+
+            <Button
+                android:id="@+id/calcular"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:text="calcular" />
+
+            <Button
+                android:id="@+id/limpar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="limpar" />
+        </LinearLayout>
+    </LinearLayout>
 </androidx.appcompat.widget.LinearLayoutCompat>
